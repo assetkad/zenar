@@ -1,0 +1,18 @@
+.get {
+  background-color: #FF9829;
+}
+.header {
+  padding: 24px 0;
+  .search {
+    border: 2px solid #23C2EF;
+  }
+  .menu {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E7079;
+    li {
+      padding: 13px 18px;
+    }
+  }
+}

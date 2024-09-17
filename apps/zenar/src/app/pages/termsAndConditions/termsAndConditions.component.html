@@ -1,0 +1,58 @@
+<div class="container">
+  <zenar-header/>
+  <div class="breadcrumbs flex gap-2 items-center">
+    <span>Home page</span>
+    <span class="breadcrumbs-dot"></span>
+    <span>Terms and Conditions</span>
+  </div>
+  <main class="privacy">
+    <h1 class="title mb-10">Terms and Conditions</h1>
+
+    <div class="privacy-policy-container flex gap-8">
+      <div class="sections">
+        <ul class="flex flex-col gap-4 w-[392px]">
+          <li><a id="link-right" (click)="scrollToSection('right')">Right to use</a></li>
+          <li><a id="link-credentials" (click)="scrollToSection('credentials')">Account credentials</a></li>
+          <li><a id="link-agreement" (click)="scrollToSection('agreement')">Modification of this agreement</a></li>
+        </ul>
+      </div>
+      <div class="content flex flex-col gap-8">
+        <section id="right" class="flex flex-col gap-4">
+          <h2>Right to use</h2>
+          <p>The right to use the ZENAR service is owned by “Mobile Protection KZ”. The rights to the ZENAR software, visual interfaces, graphics, design, computer code, trademarks, service marks, trade names, and all other elements of the service (collectively referred to as "Materials") are the property of “Mobile Protection KZ”. You agree not to sell, license, distribute, copy, modify, publicly perform or display, transmit, publish, edit, adapt, create derivative works from, or otherwise use the Materials without authorization.</p>
+        </section>
+        <section id="credentials" class="flex flex-col gap-4">
+          <h2>Account credentials</h2>
+          <span>
+            The ZENAR service is not available to individuals under the age of 18 or to any users whose accounts have been suspended or removed from the ZENAR service. You agree that the information you provide to ZENAR is true, accurate, current, and complete. Additionally, you agree that you will keep this information up-to-date and secure. <br> <br>
+            As you are responsible for all activities that occur under your account credentials, you must maintain strict confidentiality of your login information. You are required to notify ZENAR of any unauthorized use of your account or any breach of security that may compromise your account credentials. <br> <br>
+            We reserve the right to suspend your account and/or modify your credentials if we believe that they have been compromised for any reason. <br> <br>
+            You are prohibited from sharing your account credentials with any third party for any reason. <br> <br>
+            Your personal data is processed in accordance with the law on "Personal Data Protection." <br> <br>
+            To use the ZENAR service, you consent to the collection and processing of your personal data.
+          </span>
+        </section>
+        <section id="agreement" class="flex flex-col gap-4">
+          <h2>Modification of this agreement</h2>
+          <span>We reserve the right, at our discretion, to change, modify, add or remove portions of this Agreement or any policy at any time. Please review this Agreement and all applicable policies periodically for changes. Your continued use of the ZENAR service after any changes to this Agreement signifies your unconditional acceptance of those changes.
+          </span>
+          <span class="block my-8">By using the zenar service, you accept all the terms set forth above.</span>
+          <span>
+            Last Updated: March 29, 2021
+            <br>
+            Mobile Protection KZ Republic of Kazakhstan, 050009, Almaty, Islam Karimov Street 164, Office 311
+            <br>
+            Contact Phone: +7 775 909 84 59
+            <br>
+            Director: A.A. Karimov
+          </span>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <zenar-footer/>
+  </div>
+</footer>

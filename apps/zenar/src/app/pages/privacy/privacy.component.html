@@ -1,0 +1,101 @@
+<div class="container">
+  <zenar-header/>
+  <div class="breadcrumbs flex gap-2 items-center">
+    <span>Home page</span>
+    <span class="breadcrumbs-dot"></span>
+    <span>Privacy policy</span>
+  </div>
+  <main class="privacy">
+    <h1 class="title mb-10">Privacy Policy</h1>
+
+    <div class="privacy-policy-container flex gap-8">
+      <div class="sections">
+        <ul class="flex flex-col gap-4 w-[392px]">
+          <li><a id="link-introduction" (click)="scrollToSection('introduction')">Introduction</a></li>
+          <li><a id="link-information" (click)="scrollToSection('information')">Information We Collect</a></li>
+          <li><a id="link-how-we-use" (click)="scrollToSection('how-we-use')">How We Use Your Information</a></li>
+          <li><a id="link-disclosure" (click)="scrollToSection('disclosure')">Disclosure of Information</a></li>
+          <li><a id="link-secure" (click)="scrollToSection('secure')">Data Security</a></li>
+          <li><a id="link-privacy" (click)="scrollToSection('privacy')">Changes to the Privacy Policy</a></li>
+          <li><a id="link-contact" (click)="scrollToSection('contact')">Contact Information</a></li>
+        </ul>
+      </div>
+      <div class="content flex flex-col gap-8">
+        <section id="introduction" class="flex flex-col gap-4">
+          <h2>Introduction</h2>
+          <p>Please read this Privacy Policy carefully before using the ZENAR service. This policy outlines how we collect, use, disclose, and protect your personal data when you interact with the ZENAR service. By using the ZENAR service, you agree to the collection and processing of your personal data in accordance with this policy and applicable data protection laws.</p>
+        </section>
+        <section id="information" class="flex flex-col gap-4">
+          <h2>Information We Collect</h2>
+          <span>When you use the ZENAR service, we may collect the following personal information:
+            <ul class="content-mylist mt-2">
+              <li>Mobile device ID</li>
+              <li>Phone number</li>
+              <li>Mobile device accounts</li>
+              <li>Email address</li>
+              <li>Any other relevant information that you provide</li>
+            </ul>
+          </span>
+        </section>
+        <section id="how-we-use" class="flex flex-col gap-4">
+          <h2>How We Use Your Information</h2>
+          <span>We may use your personal information for the following purposes:
+            <ul class="content-mylist mt-2">
+              <li>To send non-commercial marketing or administrative communications, such as confidentiality and security notices, or service updates related to the ZENAR service.</li>
+              <li>To respond to customer service inquiries and provide support.</li>
+            </ul>
+            <br>
+            We will not use your personal information to send commercial marketing messages without your explicit consent.
+            <br>
+            <p class="mt-2">
+              Please note that when you purchase the ZENAR service, neither the retailer nor Mobile Protection KZ LLP requires any information from the purchaser related to the evaluation of risks associated with the service. Furthermore, ZENAR does not evaluate or assess any potential risks of mobile device failure or related losses under this service.
+            </p>
+          </span>
+        </section>
+        <section id="disclosure" class="flex flex-col gap-4">
+          <h2>Disclosure of Information</h2>
+          <span>We may disclose your personal information under the following circumstances:
+            <ul class="content-mylist mt-2">
+              <li>To comply with legal obligations or in response to requests from law enforcement or other competent authorities.</li>
+            </ul>
+            <p class="mt-2">We will not disclose your personal information to third parties without your consent unless required by law.</p>
+          </span>
+        </section>
+        <section id="security" class="flex flex-col gap-4">
+          <h2>Data Security</h2>
+          <p>We use commercially reasonable physical, managerial, and technical measures to protect the personal data you share with us. However, we cannot guarantee the complete security of your information. Any information you transmit to us is done at your own risk.</p>
+        </section>
+        <section id="privacy" class="flex flex-col gap-4">
+          <h2>Changes to the Privacy Policy</h2>
+          <p>This Privacy Policy may be updated periodically without prior notice. The "Last Revision" date will reflect any changes made. We encourage you to review this page regularly to stay informed of any updates. Your continued use of the ZENAR service constitutes acceptance of any changes made to this policy. <br>
+            <br>
+            In the event of any material changes that affect how we use or disclose your personal information, we will make reasonable efforts to notify you and obtain your consent before implementing those changes. We will provide such notice either via email or on <span style="color: #167493; cursor: pointer;">the ZENAR service page.</span></p>
+        </section>
+        <section id="contact" class="flex flex-col gap-4">
+          <h2>Contact Information</h2>
+          <p>Mobile Protection KZ LLP
+            <br>
+            Republic of Kazakhstan, 050009
+            <br>
+            Almaty, Islam Karimov Street 164, Office 311
+            <br>
+            Contact phone: +7 775 909 84 59
+            <br>
+            Director: Karimov A.A.
+
+            <span class="block my-8">
+              Last Revision Date: March 29, 2021
+            </span>
+
+            By using the ZENAR service, you acknowledge and accept the terms outlined in this Privacy Policy.
+            </p>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <zenar-footer/>
+  </div>
+</footer>

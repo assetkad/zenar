@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './assets/theme/themes' as themes;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@include mat.core();
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.light-theme {
+  @include mat.all-component-colors(themes.$light-theme);
+}
+  
+body.dark-theme {
+  @include mat.all-component-colors(themes.$dark-theme);
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1240px) {
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1241px) and (max-width: 1920px) {
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mat-mdc-button.mat-primary {
+  border-radius: 8px;
+  padding: 18px 13px;
+  background-color: #FF9829;
+  .mdc-button__label {
+    color: white;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0C5B7E
+}
+
+.footer {
+  background-color: #F5F5F5;
+}
+
+br {
+  content: "";
+  margin: 3em;
+  display: block;
+  font-size: 21%;
+}

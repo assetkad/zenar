@@ -1,0 +1,43 @@
+.breadcrumbs {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #BFBFBF;
+  &-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #FF9829;
+  }
+}
+
+.works {
+  padding: 80px 0;
+  height: 400px;
+  background: url('../../../assets/backgrounds/works/howitworks.png') center/cover no-repeat;
+  .title {
+    color: white;
+  }
+}
+
+.protect {
+  padding: 80px 0;
+  .subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #1E1E1E;
+  }
+  .step {
+    padding: 16px 24px;
+    background: #F5F5F5;
+    border-radius: 16px;
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 33px;
+      color: #0C5B7E;
+    }
+  }
+}

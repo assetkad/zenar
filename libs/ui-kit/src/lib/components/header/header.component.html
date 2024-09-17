@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="flex gap-10 items-center">
+    <div class="logo w-[180px]">
+      <a routerLink="/home">
+        <img src="../../assets/icons/logo.svg" alt="Logo">
+      </a>
+    </div>
+    <div class="w-[645px]">
+      <div class="search flex justify-between">
+        <input class="search-input" matInput>
+        <button mat-button class="search-button">
+          <img src="../../assets/icons/search.svg" alt="">
+        </button>
+  
+      </div>
+    </div>
+    <div class="flex items-center">
+      <button class="get w-32" color="primary" mat-button>
+        Get started
+      </button>
+      <button mat-button class="ml-6 flex items-center">
+        <img class="inline" src="../../assets/icons/user.svg" alt="">
+        <span class="ml-2">Log in</span>
+      </button>
+      <button mat-button class="ml-2 flex items-center">
+        <img class="inline" src="../../assets/icons/en.svg" alt="">
+        <span class="ml-2">En</span>
+      </button>
+    </div>
+  </div>
+  <ul class="menu flex">
+    <li>
+      <a routerLink="/about">About Us</a>
+    </li>
+    <li>
+      <a routerLink="/">Coverage Plans</a>
+    </li>
+    <li>
+      <a routerLink="/how-it-works">How it works</a>
+    </li>
+    <li>
+      <a routerLink="">Contact</a>
+    </li>
+    <li>
+      <a routerLink="">FAQs</a>
+    </li>
+    <li>
+      <a routerLink="">Loyalty Program</a>
+    </li>
+  </ul>
+</header>

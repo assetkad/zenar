@@ -1,0 +1,244 @@
+<div class="container">
+  <zenar-header/>
+</div>
+<section class="main">
+  <div class="container">
+    <h1 class="main-title">Hassle-free <span class="italic">refund to replace</span><br>your damaged device</h1>
+    <h2 class="main-subtitle">Your peace of mind guaranteed.</h2>
+    <button color="primary" mat-button class="main-button">Get started</button>
+    <img class="main-claim" src="../../assets/claim.svg" alt="">
+    <div class="main-list flex items-center justify-between mt-[130px]">
+      <div class="main-list-item flex items-center">
+        <img class="inline" src="../../assets/icons/union.svg" alt="">
+        <span class="ml-2">No lengthy claims</span>
+      </div>
+      <div class="main-list-item flex items-center">
+        <img class="inline" src="../../assets/icons/union2.svg" alt="">
+        <span class="ml-2">Back in action - quick and easy</span>
+      </div>
+      <div class="main-list-item flex items-center">
+        <img class="inline" src="../../assets/icons/union3.svg" alt="">
+        <span class="ml-2">No need to wait for repair</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="protection">
+  <div class="container">
+    <h1 class="title mb-10">Everyday life can be <span class="italic">tough</span> on your devices</h1>
+    <zenar-carousel [data]="slides"></zenar-carousel>
+  </div>
+</section>
+<section class="description">
+  <div class="container">
+    <h1 class="title">
+      Trust ZENAR to handle the tough moments
+    </h1>
+    <span class="description-about">
+      With ZENAR, you can eliminate the stress, expense and delays associated with device failures. Our innovative refund guarantee service ensures you stay pluged in, no matter what. 
+    </span>
+
+    <div class="description-cards-container my-10 flex flex-wrap gap-9">
+      <div class="description-cards-first flex">
+        <div class="description-card flex flex-col gap-3">
+          <div class="description-card-title flex items-center">
+            <img src="../../assets/icons/stress.svg" alt="">
+            <span class="ml-2">Stress free</span>
+          </div>
+          <div class="description-card-subtitle">
+            Skip the lengthy evaluation and repair process. Use your refund for immediate replacement.
+          </div>
+        </div>
+      </div>
+      <div class="description-cards-second flex justify-between">
+        <div class="description-card flex flex-col gap-3">
+          <div class="description-card-title flex items-center">
+            <img src="../../assets/icons/inclusive.svg" alt="">
+            <span class="ml-2">All-Inclusive</span>
+          </div>
+          <div class="description-card-subtitle">
+            Covers absolutely any type of damage, from fire and liquid to mechanical or software failure
+          </div>
+        </div>
+        <img class="description-card-logo" src="../../assets/descriptionlogo.svg" alt="">
+        <div class="description-card flex flex-col gap-3">
+          <div class="description-card-title flex items-center">
+            <img src="../../assets/icons/fast.svg" alt="">
+            <span class="ml-2">Fast & Easy</span>
+          </div>
+          <div class="description-card-subtitle">
+            Submit your request through our website/app and get refund decision within 5 minutes.
+          </div>
+        </div>
+      </div>
+      <div class="description-cards-third flex">
+        <div class="description-card flex flex-col gap-3">
+          <div class="description-card-title flex items-center">
+            <img src="../../assets/icons/affordable.svg" alt="">
+            <span class="ml-2">Affordable</span>
+          </div>
+          <div class="description-card-subtitle">
+            Pay only 8-15% of the original device value for comprehensive coverage.
+          </div>
+        </div>
+        <div class="description-card flex flex-col gap-3">
+          <div class="description-card-title flex items-center">
+            <img src="../../assets/icons/secure.svg" alt="">
+            <span class="ml-2">Secure</span>
+          </div>
+          <div class="description-card-subtitle">
+            Your confidential data remains with you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="plans">
+  <div class="container">
+    <h1 class="title">
+      Choose from a range of plans designed<br><span class="italic">to fit your lifestyle</span>
+    </h1>
+    
+    <div class="plans-cards flex gap-8 my-10">
+      <div class="plans-card flex flex-col items-center">
+        <img src="../../assets/pictures/smartphone.png" alt="">
+        <h3 class="plans-card-title mt-6">Smartphones</h3>
+        <span class="plans-card-descr">Up to $ XXXX</span>
+        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+          Get started
+        </button>
+      </div>
+
+       <div class="plans-card flex flex-col items-center">
+        <img src="../../assets/pictures/laptop.png" alt="">
+        <h3 class="plans-card-title mt-6">Laptops</h3>
+        <span class="plans-card-descr">Up to $ XXXX</span>
+        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+          Get started
+        </button>
+      </div>
+
+       <div class="plans-card flex flex-col items-center">
+        <img src="../../assets/pictures/headphones.png" alt="">
+        <h3 class="plans-card-title mt-6">Wearable devices</h3>
+        <span class="plans-card-descr">Up to $ XXXX</span>
+        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+          Get started
+        </button>
+      </div>
+    </div>
+    <div class="plans-cards my-8 flex gap-8">
+      <div class="plans-card-secondrow flex flex-col items-center">
+        <img src="../../assets/pictures/appliances.png" alt="">
+        <h3 class="plans-card-title mt-6">Small appliances</h3>
+        <span class="plans-card-descr">Up to $ XXXX</span>
+        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+          Get started
+        </button>
+      </div>
+
+       <div class="plans-card-secondrow flex flex-col items-center">
+        <img src="../../assets/pictures/appliances2.png" alt="">
+        <h3 class="plans-card-title mt-6">Major appliances</h3>
+        <span class="plans-card-descr">Up to $ XXXX</span>
+        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+          Get started
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="feedback">
+  <div class="container">
+    <h1 class="title">
+      Trusted by <span class="italic">over 1,5 million</span> satisfied customers
+    </h1>
+    
+    <div class="feedback-cards flex items-start gap-8 mt-10">
+      <div class="feedback-card p-6 flex flex-col gap-3">
+        <div class="feedback-card-head flex items-center gap-3">
+          <img src="../../assets/icons/laptop.svg" alt="">
+          <div class="feedback-card-head-title flex flex-col">
+            <div class="feedback-card-head-title-stars flex">
+              <img src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+            </div>
+            <h5 class="feedback-card-head-title-text">
+              Aibat A., Small Business<br> Owner
+            </h5>
+          </div>
+        </div>
+        <div class="feedback-card-body">
+          <span>
+            "Extremely happy with ZENAR service. I had my laptop screen break. Called to place the claim, got approval in 5 minutes, and rushed to a  local shop. Got a new laptop within two hours!"
+          </span>
+        </div>
+      </div>
+
+      <div class="feedback-card p-6 flex flex-col gap-3">
+        <div class="feedback-card-head flex items-center gap-3">
+          <img src="../../assets/icons/laptop.svg" alt="">
+          <div class="feedback-card-head-title flex flex-col">
+            <div class="feedback-card-head-title-stars flex">
+              <img src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+            </div>
+            <h5 class="feedback-card-head-title-text">
+              Timur Z., Software Engineer
+            </h5>
+          </div>
+        </div>
+        <div class="feedback-card-body">
+          <span>
+            "I've dealt with standard warranties before, and it's always a nightmare—complicated claims, endless paperwork, and waiting weeks for repairs. ZENAR is so different! When I dropped my laptop, I filed a claim online, and within minutes my calim was approved. No hassle, no long waits, just quick and easy"
+          </span>
+        </div>
+      </div>
+
+      <div class="feedback-card p-6 flex flex-col gap-3">
+        <div class="feedback-card-head flex items-center gap-3">
+          <img src="../../assets/icons/laptop.svg" alt="">
+          <div class="feedback-card-head-title flex flex-col">
+            <div class="feedback-card-head-title-stars flex">
+              <img src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+              <img class="ml-[2px]" src="../../assets/icons/star.svg" alt="">
+            </div>
+            <h5 class="feedback-card-head-title-text">
+              Maria K., Freelance Designer
+            </h5>
+          </div>
+        </div>
+        <div class="feedback-card-body">
+          <span>
+            "My phone took an unexpected dive into the pool. I had ZENAR protection, so I called them, send the photo - and my claim was approved.  I had a refund - and could buy a new phone by the end of the day. Highly recommend!"
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="container">
+    <h1 class="block-title">
+      Don't let a broken device<br>disrupt your life
+    </h1>
+    <h2 class="block-subtitle mt-10">
+      Join the ZENAR family - and enjoy peace<br>of mind 
+    </h2>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <zenar-footer/>
+  </div>
+</footer>

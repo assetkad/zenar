@@ -1,0 +1,13 @@
+@if (data()) {
+  <swiper-container class="mySwiper"
+  [slidesPerView]="3"
+  autoplay="true"
+  containerModifierClass="swiper-shit"
+  [spaceBetween]="30" scrollbar-hide="false">
+  @for (item of data(); track $index) {
+      <swiper-slide class="swiper-element"><img src="{{item.src}}" alt=""></swiper-slide>
+    }
+  </swiper-container>
+}
+
+

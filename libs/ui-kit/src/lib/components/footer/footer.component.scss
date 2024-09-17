@@ -1,0 +1,28 @@
+.footer {
+  padding: 60px 0 40px 0;
+  background: #F5F5F5;
+  .menu {
+    max-width: 710px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E7079;
+    li {
+      padding: 13px 18px;
+    }
+  }
+  &-links {
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &-text {
+        padding: 12px 18px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #465358;
+      }
+    }
+  }
+}
