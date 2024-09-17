@@ -29,6 +29,17 @@
     text-align: center;
     color: #1E1E1E;
   }
+  .steps {
+    &-wrap {
+      position: relative;
+      &-vector {
+        position: absolute;
+        top: 111px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
   .step {
     padding: 16px 24px;
     background: #F5F5F5;
