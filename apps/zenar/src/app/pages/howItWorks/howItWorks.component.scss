@@ -39,5 +39,18 @@
       line-height: 33px;
       color: #0C5B7E;
     }
+    &-body {
+      &-content {
+        span {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 140%;
+          color: #465358;
+        }
+        a {
+          color: #16749E;
+        }
+      }
+    }
   }
 }
