@@ -22,7 +22,7 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/zenar/src/assets",
-          "apps/dashboard/src/netlify.toml",
+          "apps/zenar/src/netlify.toml",
           {
             "glob": "**/*",
             "input": "apps/zenar/public"
