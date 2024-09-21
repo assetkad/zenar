@@ -16,7 +16,7 @@
 <section class="protect">
   <div class="container">
     <h1 class="title">Protect your device with ZENAR</h1>
-    <h4 class="subtitle mt-4">You can protect your device when you buy it in-store or later on our website. To purchase the plan online, follow 3 simple steps</h4>
+    <h4 class="subtitle mt-4">You can protect your device when you buy it in-store or later on our website. <br>To purchase the plan online, follow 3 simple steps</h4>
 
     <div class="steps-wrap mt-10">
       <div class="steps-container">
@@ -74,7 +74,113 @@
       </div>
   
       <img src="../../../assets/vector.svg" alt="" class="steps-wrap-vector">
+      <img src="../../../assets/pictures/enjoy.svg" class="steps-wrap-enjoy" alt="">
     </div>
+  </div>
+</section>
+<section class="accidents">
+  <h1 class="title">
+    ACCIDENTS
+  </h1>
+  <h1 class="title">
+    DO HAPPEN!
+  </h1>
+</section>
+<section class="protect">
+  <div class="container">
+    <h1 class="title">Protect your device with ZENAR</h1>
+    <h4 class="subtitle mt-4">You can protect your device when you buy it in-store or later on our website. <br>To purchase the plan online, follow 3 simple steps</h4>
+
+    <div class="steps-wrap mt-10">
+      <div class="steps-container">
+        <div class="step w-[392px]">
+          <h1 class="step-title">
+            Choose Your Plan
+          </h1>
+          <div class="step-body mt-4">
+            <div class="step-body-content flex items-start gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b class="bold">Explore Options:</b> Visit our Coverage <a href="/home">Plans page</a></span>
+            </div>
+            <div class="step-body-content mt-2 items-start flex gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b>Compare Plans:</b> Use our tools to find the best coverage for your device</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="steps-container flex justify-end">
+        <div class="step w-[392px]">
+          <h1 class="step-title">
+            Choose Your Plan
+          </h1>
+          <div class="step-body mt-4">
+            <div class="step-body-content flex items-start gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b class="bold">Explore Options:</b> Visit our Coverage <a href="/home">Plans page</a></span>
+            </div>
+            <div class="step-body-content mt-2 items-start flex gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b>Compare Plans:</b> Use our tools to find the best coverage for your device</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="steps-container">
+        <div class="step w-[392px]">
+          <h1 class="step-title">
+            Choose Your Plan
+          </h1>
+          <div class="step-body mt-4">
+            <div class="step-body-content flex items-start gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b class="bold">Explore Options:</b> Visit our Coverage <a href="/home">Plans page</a></span>
+            </div>
+            <div class="step-body-content mt-2 items-start flex gap-2">
+              <img src="../../../assets/icons/stress.svg" alt="">
+              <span><b>Compare Plans:</b> Use our tools to find the best coverage for your device</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <img src="../../../assets/vector.svg" alt="" class="steps-wrap-vector">
+      <img src="../../../assets/pictures/enjoy.svg" class="steps-wrap-enjoy" alt="">
+    </div>
+  </div>
+</section>
+<section class="take">
+  <div class="container flex">
+    <h1 class="title">
+      Take 5 minutes today to enjoy<br> peace of mind for years
+    </h1>
+  </div>
+</section>
+<section class="stores">
+  <div class="container">
+    <h1 class="title">You may also protect your device<br>
+      with <span class="italic">ZENAR</span> in the following stores</h1>
+    <div class="selects flex items-center gap-12">
+      <div class="select flex items-center gap-4 w-[454px]">
+        <p>Select country:</p>
+        <mat-select>
+          @for (food of foods; track food) {
+            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+          }
+        </mat-select>
+      </div>
+      <div class="select flex items-center gap-4 w-[454px]">
+        <p>Select city:</p>
+        <mat-select>
+          @for (food of foods; track food) {
+            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+          }
+        </mat-select>
+      </div>
+    </div>
+      <div id="map" style="width: 100%; height: 677px;"></div>
   </div>
 </section>
 <footer class="footer">

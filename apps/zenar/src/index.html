@@ -8,6 +8,25 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script>
+      var map;
+      DG.then(function() {
+          map = DG.map('map', {
+              center: [43.20, 76.83],
+              zoom: 14,
+              dragging : true,
+              touchZoom: true,
+              scrollWheelZoom: true,
+              doubleClickZoom: true,
+              boxZoom: true,
+              geoclicker: true,
+              zoomControl: false,
+              fullscreenControl: false
+          });
+          DG.marker([43.20, 76.83]).addTo(map)
+      });
+  </script>
 </head>
   <body>
     <app-root></app-root>

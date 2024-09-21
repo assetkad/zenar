@@ -38,6 +38,9 @@
         left: 50%;
         transform: translate(-50%, 0);
       }
+      &-enjoy {
+        margin-left: 50%;
+      }
     }
   }
   .step {
@@ -63,5 +66,49 @@
         }
       }
     }
+  }
+}
+
+.accidents {
+  padding: 80px 115px;
+  height: 540px;
+  background: url('../../../assets/backgrounds/works/accidents.png') center/cover no-repeat;
+  .title {
+    color: #16749E;
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 117px;
+    &:nth-of-type(1) {
+      text-align: start;
+    }
+    &:nth-of-type(2) {
+      text-align: end;
+      margin-top: 170px;
+    }
+  }
+}
+
+.take {
+  height: 540px;
+  padding: 80px 0;
+  background: url('../../../assets/backgrounds/works/take.png') center/cover no-repeat;
+  .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .title {
+    color: white;
+  }
+}
+
+.stores {
+  padding: 100px 0;
+  .title {
+    line-height: 20px;
+  }
+
+  .selects {
+    padding: 40px 0;
   }
 }
