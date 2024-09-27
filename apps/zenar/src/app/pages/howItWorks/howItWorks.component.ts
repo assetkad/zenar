@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FooterComponent, HeaderComponent } from '@zenar/ui-kit';
+import { RouterLink } from '@angular/router';
 
 interface Food {
   value: string;
@@ -20,6 +21,7 @@ interface Food {
     FooterComponent,
     FormsModule,
     MatFormFieldModule,
+    RouterLink,
     MatSelectModule,
     MatInputModule,
   ],

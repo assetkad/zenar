@@ -28,6 +28,11 @@ export const appRoutes: Route[] = [
       ),
   },
   {
+    path: 'faq',
+    loadComponent: () =>
+      import('./pages/faq/faq.component').then((module) => module.FaqComponent),
+  },
+  {
     path: 'about',
     loadComponent: () =>
       import('./pages/about/about.component').then(

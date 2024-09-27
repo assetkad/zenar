@@ -1,0 +1,56 @@
+<div class="container">
+  <zenar-header/>
+  <div class="breadcrumbs flex gap-2 items-center">
+    <span>Home page</span>
+    <span class="breadcrumbs-dot"></span>
+    <span>FAQS</span>
+  </div>
+  <main class="privacy">
+    <h1 class="title mb-10">Faq</h1>
+
+    <div class="list-container flex">
+      <!-- Список узлов дерева -->
+      <ul>
+        <li *ngFor="let node of dataSource; let i = index">
+          <div (click)="toggleNode(i)">
+            {{ node.name }}
+            <button>
+              <mat-icon>{{ isExpanded(i) ? 'expand_less' : 'expand_more' }}</mat-icon>
+            </button>
+          </div>
+    
+          <!-- Дочерние элементы -->
+          <ul *ngIf="isExpanded(i)">
+            <li *ngFor="let child of node.children">
+              {{ child.name }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    
+      <!-- Контент для раскрытых узлов -->
+      <div [ngSwitch]="expandedNodeIndex">
+        <div *ngSwitchCase="0">
+          <p>Content for General Information</p>
+          <!-- Тут можно разместить любой контент для узла с индексом 0 -->
+        </div>
+        <div *ngSwitchCase="1">
+          <p>Content for Plan and Pricing</p>
+          <!-- Контент для узла с индексом 1 -->
+        </div>
+        <div *ngSwitchCase="2">
+          <p>Content for Another tag</p>
+          <!-- Контент для узла с индексом 2 -->
+        </div>
+        <div *ngSwitchDefault>
+          <p>Select a section to see content</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <zenar-footer/>
+  </div>
+</footer>
