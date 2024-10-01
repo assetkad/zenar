@@ -36,6 +36,17 @@
   color: #0C5B7E;
 }
 
+.sections {
+  &-child {
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 27px;
+      color: #5E7079;
+    }
+  }
+}
+
 .content {
   h2 {
     font-weight: 700;

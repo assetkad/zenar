@@ -8,39 +8,48 @@
   <main class="privacy">
     <h1 class="title mb-10">Faq</h1>
 
-    <div class="list-container flex">
-      <!-- Список узлов дерева -->
-      <ul>
-        <li *ngFor="let node of dataSource; let i = index">
-          <div (click)="toggleNode(i)">
-            {{ node.name }}
-            <button>
-              <mat-icon>{{ isExpanded(i) ? 'expand_less' : 'expand_more' }}</mat-icon>
-            </button>
-          </div>
+    <div class="list-container flex gap-8">
+      <div class="sections">
+        <ul class="flex flex-col gap-4 w-[392px]">
+          <li *ngFor="let node of dataSource; let i = index">
+            <div class="flex justify-between" (click)="toggleNode(i)">
+              <li [ngClass]="{'active': isExpanded(i)}"><a>{{ node.name }}</a></li>
+              <button>
+                @if(isExpanded(i)) {
+                  <img src="../../../assets/icons/keyboard_arrow_up.svg" alt="">
+                } @else {
+                  <img src="../../../assets/icons/keyboard_arrow_down.svg" alt="">
+                }
+              </button>
+            </div>
+      
+            <ul class="gap-4 mt-4 flex flex-col" *ngIf="isExpanded(i)">
+              <li class="pl-6 sections-child w-[382px]" *ngFor="let child of node.children">
+                <span>{{ child.name }}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     
-          <!-- Дочерние элементы -->
-          <ul *ngIf="isExpanded(i)">
-            <li *ngFor="let child of node.children">
-              {{ child.name }}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    
-      <!-- Контент для раскрытых узлов -->
-      <div [ngSwitch]="expandedNodeIndex">
+      <div class="content flex flex-col gap-8" [ngSwitch]="expandedNodeIndex">
         <div *ngSwitchCase="0">
           <p>Content for General Information</p>
-          <!-- Тут можно разместить любой контент для узла с индексом 0 -->
         </div>
         <div *ngSwitchCase="1">
           <p>Content for Plan and Pricing</p>
-          <!-- Контент для узла с индексом 1 -->
         </div>
         <div *ngSwitchCase="2">
-          <p>Content for Another tag</p>
-          <!-- Контент для узла с индексом 2 -->
+          <p>Content for Claims</p>
+        </div>
+        <div *ngSwitchCase="3">
+          <p>Content for Device Security and Data</p>
+        </div>
+        <div *ngSwitchCase="4">
+          <p>Content for Refunds and Compensation</p>
+        </div>
+        <div *ngSwitchCase="5">
+          <p>Content for Account and Technical Support</p>
         </div>
         <div *ngSwitchDefault>
           <p>Select a section to see content</p>

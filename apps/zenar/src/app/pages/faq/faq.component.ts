@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule, NgFor, NgIf, NgSwitch } from '@angular/common';
 import { FooterComponent, HeaderComponent } from '@zenar/ui-kit';
 import { MatTreeModule } from '@angular/material/tree';
@@ -26,6 +26,15 @@ interface TreeNode {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FaqComponent {
+  sectionIds = [
+    'information',
+    'plans-and-pricing',
+    'claims',
+    'security',
+    'refunds',
+    'support',
+  ];
+
   dataSource: TreeNode[] = [
     {
       name: 'General Information',
@@ -34,6 +43,25 @@ export class FaqComponent {
         {
           name: 'What types of devices can be covered under ZENAR protection plans?',
         },
+        {
+          name: 'When does my coverage start?',
+        },
+        { name: 'How long does the protection last?' },
+        {
+          name: 'Can I buy ZENAR protection after purchasing a device?',
+        },
+        {
+          name: 'How do I register for ZENAR protection?',
+        },
+        {
+          name: 'Can I purchase protection for a device not bought from a ZENAR partner?',
+        },
+        {
+          name: 'What is the difference between ZENAR and an extended warranty?',
+        },
+        {
+          name: 'I already have the manufacturer’s guarantee. Why do I need ZENAR?',
+        },
       ],
     },
     {
@@ -41,25 +69,33 @@ export class FaqComponent {
       children: [{ name: 'Something' }, { name: 'Something lorem' }],
     },
     {
-      name: 'Another tag',
+      name: 'Claims',
+      children: [{ name: 'Something' }, { name: 'Something lorem' }],
+    },
+    {
+      name: 'Device Security and Data',
+      children: [{ name: 'Something' }, { name: 'Something lorem' }],
+    },
+    {
+      name: 'Refunds and Compensation',
+      children: [{ name: 'Something' }, { name: 'Something lorem' }],
+    },
+    {
+      name: 'Account and Technical Support',
       children: [{ name: 'Something' }, { name: 'Something lorem' }],
     },
   ];
 
-  // Переменная для отслеживания индекса раскрытого узла
   expandedNodeIndex: number | null = 0;
 
   toggleNode(index: number): void {
-    // Если узел уже раскрыт, закрываем его
     if (this.expandedNodeIndex === index) {
       this.expandedNodeIndex = null;
     } else {
-      // Иначе раскрываем новый узел и закрываем остальные
       this.expandedNodeIndex = index;
     }
   }
 
-  // Метод для проверки, раскрыт ли узел
   isExpanded(index: number): boolean {
     return this.expandedNodeIndex === index;
   }
