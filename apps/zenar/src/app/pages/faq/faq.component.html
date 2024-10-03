@@ -30,11 +30,100 @@
             </ul>
           </li>
         </ul>
+        <form class="mt-10">
+          <h3>Didn't find your question? Contact us!</h3>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br>
+          <label for="question">Question:</label><br>
+          <textarea type="text" id="question" name="question"></textarea><br>
+
+          <input type="checkbox" name="terms" id="terms" >I agree to the Terms and Conditions and Privacy Policy
+
+          <button>Submit</button>
+        </form>
       </div>
     
       <div class="content flex flex-col gap-8" [ngSwitch]="expandedNodeIndex">
         <div *ngSwitchCase="0">
-          <p>Content for General Information</p>
+          <div class="box">
+            <h2>General Information</h2>
+            <span class="box_content">
+            </span>
+          </div>
+          <div class="box mt-8">
+            <h2 class="box_title">What is ZENAR?</h2>
+            <span class="box_content mt-4">
+              ZENAR is a service that protects devices from unexpected damage, including software failures. ZENAR offers guaranteed quick refund of 60-70% of your device’s original value, with no need for lengthy evaluations or repairs.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">What types of devices can be covered under ZENAR protection plans?</h2>
+            <span class="box_content mt-4">
+              ZENAR protection plans cover smartphones, tablets, laptops, wireless headphones, smartwatches, small household appliances, and large household appliances.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">When does my coverage start?</h2>
+            <span class="box_content mt-4">
+              Protection begins as soon as you purchase the service.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">How long does the protection last?</h2>
+            <span class="box_content mt-4">
+              ZENAR protection plans cover smartphones, tablets, laptops, wireless headphones, smartwatches, small household appliances, and large household appliances.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">Can I buy ZENAR protection after purchasing a device?</h2>
+            <span class="box_content mt-4">
+              Yes, ZENAR protection can be purchased within three months of buying your device. Visit our Coverage Plans      page to select your plan
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">How do I register for ZENAR protection?</h2>
+            <span class="box_content mt-4">
+              Your ZENAR protection is registered automatically when you purchase the service.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">Can I purchase protection for a device not bought from a ZENAR partner?</h2>
+            <span class="box_content mt-4">
+              Yes, you can purchase protection directly from our website. Visit our Coverage Plans      page to select your plan
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">What is the difference between ZENAR and an extended warranty?</h2>
+            <span class="box_content mt-4">
+              Unlike extended warranties, which often involve lengthy evaluations and repairs, ZENAR offers quick refunds of 60-70% of your device's original value. This allows you to buy a new device right away without waiting for repairs or assessments.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">I already have the manufacturer’s guarantee. Why do I need ZENAR?</h2>
+            <span class="box_content mt-4">
+              Manufacturer warranties typically cover limited issues and can involve long repair processes. ZENAR, however, covers all types of damage, from liquid spills and drops to software malfunctions. 
+            </span>
+            <span class="box_content mt-4">
+              Instead of waiting for repairs, ZENAR offers a fast refund of 60-70% of your device’s original value, so you can buy a new device without the hassle of evaluations or repair delays.
+            </span>
+          </div>
+
+          <div class="box mt-8">
+            <h2 class="box_title">What types of devices can be covered under ZENAR protection plans?</h2>
+            <span class="box_content mt-4">
+              It is up to you to decide when you are choosing your Coverage Plans      the protection lasts from 2 years to 4 years for large household appliances, and from 6 months to 2 years for all other devices.
+            </span>
+          </div>
         </div>
         <div *ngSwitchCase="1">
           <p>Content for Plan and Pricing</p>
