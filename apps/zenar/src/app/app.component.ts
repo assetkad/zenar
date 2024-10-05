@@ -10,4 +10,8 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'zenar';
+
+  showAlert() {
+    alert('Yes?!');
+  }
 }

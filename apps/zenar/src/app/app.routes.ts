@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const appRoutes: Route[] = [
   {
@@ -46,4 +47,13 @@ export const appRoutes: Route[] = [
         (module) => module.HowItWorksComponent
       ),
   },
+  {
+    path: 'coverage-plans',
+    loadComponent: () =>
+      import('./pages/coverage-plans/coverage-plans.component').then(
+        (module) => module.CoveragePlansComponent
+      ),
+  },
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' },
 ];

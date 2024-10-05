@@ -88,3 +88,15 @@ br {
   display: block;
   font-size: 21%;
 }
+
+br.except {
+  margin: 0em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+li > a {
+  text-decoration: none;
+}

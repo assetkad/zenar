@@ -1,0 +1,22 @@
+img.not-found-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  position: relative;
+}
+
+.group {
+  bottom: 7%;
+  left: 43%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+  margin: 0 auto;
+}

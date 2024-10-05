@@ -9,7 +9,7 @@ interface TreeNode {
   children?: TreeNode[];
 }
 @Component({
-  selector: 'app-privacy',
+  selector: 'app-faq',
   standalone: true,
   imports: [
     CommonModule,
