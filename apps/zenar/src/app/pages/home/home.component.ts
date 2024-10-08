@@ -4,7 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ThemeService } from '../../services/theme.service';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {
   CarouselComponent,
   FooterComponent,
@@ -31,7 +31,7 @@ import {
 export class HomeComponent implements OnInit {
   slides: { src: string }[] = [];
 
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService, private route: Router) {}
 
   ngOnInit(): void {
     this.slides[0] = {
@@ -62,5 +62,9 @@ export class HomeComponent implements OnInit {
 
   toggleTheme(): void {
     this.themeService.toggleTheme();
+  }
+
+  redirectToSignup() {
+    this.route.navigate(['register']);
   }
 }

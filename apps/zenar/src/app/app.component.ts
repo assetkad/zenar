@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -11,7 +11,9 @@ import { RouterModule } from '@angular/router';
 export class AppComponent {
   title = 'zenar';
 
-  showAlert() {
-    alert('Yes?!');
+  constructor(private route: Router) {}
+
+  redirectToSignup() {
+    this.route.navigate(['register']);
   }
 }

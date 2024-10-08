@@ -101,6 +101,31 @@
         color: #0C5B7E;
       }
     }
+    .right {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .title {
+        display: flex;
+        flex-direction: column;
+        text-align: unset;
+        h1 {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #5E7079;
+        }
+        h2 {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 22px;
+          color: #5E7079;
+        }
+      }
+    }
   }
 }
 

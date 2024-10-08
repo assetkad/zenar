@@ -15,10 +15,10 @@
       </div>
     </div>
     <div class="flex items-center">
-      <button class="get w-32" color="primary" mat-button>
+      <button class="get w-32" color="primary" mat-button (click)="redirectToSignup()">
         Get started
       </button>
-      <button mat-button class="ml-6 flex items-center">
+      <button mat-button class="ml-6 flex items-center" (click)="redirectToLogin()">
         <img class="inline" src="../../assets/icons/user.svg" alt="">
         <span class="ml-2">Log in</span>
       </button>

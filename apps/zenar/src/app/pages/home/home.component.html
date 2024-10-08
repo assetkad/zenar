@@ -5,7 +5,7 @@
   <div class="container flex flex-col h-full">
     <h1 class="main-title">Hassle-free <span class="italic">refund to replace</span><br>your damaged device</h1>
     <h2 class="main-subtitle">Your peace of mind guaranteed.</h2>
-    <button color="primary" mat-button class="main-button">Get started</button>
+    <button color="primary" mat-button class="main-button" (click)="redirectToSignup()">Get started</button>
     <div class="main-list mt-auto flex items-center justify-between">
       <div class="main-list-item flex items-center">
         <img class="inline" src="../../assets/icons/union.svg" alt="">
@@ -104,7 +104,7 @@
         <img src="../../assets/pictures/smartphone.png" alt="">
         <h3 class="plans-card-title mt-6">Smartphones</h3>
         <span class="plans-card-descr">Up to $ XXXX</span>
-        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+        <button class="get w-32 mt-6" color="primary" mat-button >
           Get started
         </button>
       </div>
@@ -113,7 +113,7 @@
         <img src="../../assets/pictures/laptop.png" alt="">
         <h3 class="plans-card-title mt-6">Laptops</h3>
         <span class="plans-card-descr">Up to $ XXXX</span>
-        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+        <button class="get w-32 mt-6" color="primary" mat-button >
           Get started
         </button>
       </div>
@@ -122,7 +122,7 @@
         <img src="../../assets/pictures/headphones.png" alt="">
         <h3 class="plans-card-title mt-6">Wearable devices</h3>
         <span class="plans-card-descr">Up to $ XXXX</span>
-        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+        <button class="get w-32 mt-6" color="primary" mat-button >
           Get started
         </button>
       </div>
@@ -132,7 +132,7 @@
         <img src="../../assets/pictures/appliances.png" alt="">
         <h3 class="plans-card-title mt-6">Small appliances</h3>
         <span class="plans-card-descr">Up to $ XXXX</span>
-        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+        <button class="get w-32 mt-6" color="primary" mat-button >
           Get started
         </button>
       </div>
@@ -141,7 +141,7 @@
         <img src="../../assets/pictures/appliances2.png" alt="">
         <h3 class="plans-card-title mt-6">Major appliances</h3>
         <span class="plans-card-descr">Up to $ XXXX</span>
-        <button class="get w-32 mt-6" color="primary" mat-button (click)="toggleTheme()">
+        <button class="get w-32 mt-6" color="primary" mat-button >
           Get started
         </button>
       </div>

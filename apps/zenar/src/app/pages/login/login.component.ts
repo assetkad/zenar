@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import {
@@ -17,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { Router, RouterLink } from '@angular/router';
 
 /**
  * Use this type to make any interface to FormGroup.
@@ -58,6 +65,7 @@ export type LoginModelForm = TypedFormModel<LoginModel>;
     MatIconModule,
     MatCheckboxModule,
     MatButtonModule,
+    RouterLink,
     FormsModule,
     MatSelectModule,
   ],
@@ -65,7 +73,7 @@ export type LoginModelForm = TypedFormModel<LoginModel>;
   styleUrl: './login.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   form!: LoginModelForm;
 
   languages: LanguageModel[] = [
@@ -77,7 +85,12 @@ export class LoginComponent implements OnInit {
   hide = true;
   selectedLanguage: { name: string } = this.languages[0];
 
-  constructor(public http: HttpClient, private fb: NonNullableFormBuilder) {}
+  constructor(
+    public http: HttpClient,
+    private fb: NonNullableFormBuilder,
+    public route: Router,
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -89,6 +102,11 @@ export class LoginComponent implements OnInit {
       }),
       remember: this.fb.control(false),
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
+      '#F5F5F5';
   }
 
   get emailInput() {
@@ -113,5 +131,9 @@ export class LoginComponent implements OnInit {
           console.log(res);
         },
       });
+  }
+
+  redirectToSignup() {
+    this.route.navigate(['register']);
   }
 }

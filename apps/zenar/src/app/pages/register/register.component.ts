@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { Router, RouterLink } from '@angular/router';
 
 /**
  * Use this type to make any interface to FormGroup.
@@ -60,6 +61,7 @@ export type RegisterModelForm = TypedFormModel<RegisterModel>;
     CommonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    RouterLink,
     MatInputModule,
     MatIconModule,
     MatCheckboxModule,
@@ -85,7 +87,11 @@ export class RegisterComponent implements OnInit {
 
   selectedLanguage: { name: string } = this.languages[0];
 
-  constructor(public http: HttpClient, private fb: NonNullableFormBuilder) {}
+  constructor(
+    public http: HttpClient,
+    private fb: NonNullableFormBuilder,
+    public route: Router
+  ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -128,22 +134,23 @@ export class RegisterComponent implements OnInit {
 
   register() {
     this.http
-      .post(
-        'http://api.zenar.world:8080/api/users/registration',
-        JSON.stringify({
-          country: this.form.controls.country,
-          phoneNumber: this.form.controls.phone,
-          email: this.form.controls.email,
-          firstName: this.form.controls.firstName,
-          lastName: this.form.controls.lastName,
-          password: this.form.controls.password,
-          confirmPassword: this.form.controls.reEnterPassword,
-        })
-      )
+      .post('http://api.zenar.world:8080/api/users/registration', {
+        country: this.form.controls.country.value,
+        phoneNumber: this.form.controls.phone.value,
+        email: this.form.controls.email.value,
+        firstName: this.form.controls.firstName.value,
+        lastName: this.form.controls.lastName.value,
+        password: this.form.controls.password.value,
+        confirmPassword: this.form.controls.reEnterPassword.value,
+      })
       .subscribe({
         next: (res) => {
           console.log(res);
         },
       });
+  }
+
+  redirectToLogin() {
+    this.route.navigate(['login']);
   }
 }

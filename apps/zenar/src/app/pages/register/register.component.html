@@ -1,103 +1,123 @@
+<header class="header">
+  <div class="container flex items-center justify-between"> 
+    <div class="logo w-[180px]">
+      <a routerLink="/home">
+        <img src="../../assets/icons/logo.svg" alt="Logo">
+      </a>
+    </div>
+    <div class="login flex items-center gap-4">
+      <p>Already have an account?</p>
+      <button color="primary" (click)="redirectToLogin()" mat-button>Log in</button>
+    </div>
+  </div>
+</header>
+
 <section class="register">
   <div class="container">
-    <form class="form" [formGroup]="form" (ngSubmit)="register()">
-      <h3 class="title">Register your account</h3>
-  
-      <div class="form-field mt-[40px]">
-        <mat-select [ngModel]="selectedLanguage" [ngModelOptions]="{standalone: true}" (ngModelChange)="onLanguageChange($event)" name="language" class="form-control w-[130px]">
-          <mat-select-trigger>
+    <div class="form-wrapper">
+      <div class="flex items-center gap-4 hint">
+        <p class="ml-auto">Already have an account?</p>
+        <a routerLink="/login">Log in</a>
+      </div>
+      <form class="form" [formGroup]="form" (ngSubmit)="register()">
+        <h3 class="title">Register your account</h3>
+    
+        <div class="form-field mt-[40px]">
+          <mat-select [ngModel]="selectedLanguage" [ngModelOptions]="{standalone: true}" (ngModelChange)="onLanguageChange($event)" name="language" class="form-control w-[130px]">
+            <mat-select-trigger>
+                <div class="flex gap-4">
+                  <img src="../../../assets/icons/eng.svg" class="flag-icon" alt="">
+                  <p>{{selectedLanguage.name}}</p>
+                </div>
+            </mat-select-trigger>
+            <mat-option *ngFor="let language of languages" [value]="language">
               <div class="flex gap-4">
                 <img src="../../../assets/icons/eng.svg" class="flag-icon" alt="">
-                <p>{{selectedLanguage.name}}</p>
+                <p>{{ language.name }}</p>
               </div>
-          </mat-select-trigger>
-          <mat-option *ngFor="let language of languages" [value]="language">
-            <div class="flex gap-4">
-              <img src="../../../assets/icons/eng.svg" class="flag-icon" alt="">
-              <p>{{ language.name }}</p>
-            </div>
-          </mat-option>
-        </mat-select>
-      </div>
-
-      <div class="form-field">
-        <h5 class="form-field-title">Country</h5>
-        <input
-          class="w-full country"
-          type="text"
-          matInput
-          formControlName="country"
-          placeholder="Enter your country"
-        />
-      </div>
-
-      <div class="form-field">
-        <h5 class="form-field-title">Mobile phone</h5>
-        <input
-          class="w-full phone"
-          type="number"
-          matInput
-          formControlName="phone"
-          placeholder="+7-7273-12345"
-        />
-      </div>
-  
-      <div class="form-field">
-        <h5 class="form-field-title">Email</h5>
-        <input
-          class="w-full email"
-          type="email"
-          matInput
-          formControlName="email"
-          placeholder="Enter your email"
-        />
-      </div>
-
-      <div class="form-field">
-        <h5 class="form-field-title">First Name</h5>
-        <input
-          class="w-full user"
-          type="text"
-          matInput
-          formControlName="firstName"
-          placeholder="James"
-        />
-      </div>
-
-      <div class="form-field">
-        <h5 class="form-field-title">Last Name</h5>
-        <input
-          class="w-full user"
-          type="text"
-          matInput
-          formControlName="lastName"
-          placeholder="Smith"
-        />
-      </div>
-  
-      <div class="form-field">
-        <h5 class="form-field-title">Password</h5>
-        <input class="w-full password" matInput placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
-        <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </div>
-
-      <div class="form-field">
-        <h5 class="form-field-title">Re-enter password</h5>
-        <input class="w-full password" matInput placeholder="Re-enter your password" [type]="hideReEnterPassword ? 'password' : 'text'" formControlName="reEnterPassword" required>
-        <mat-icon matSuffix (click)="hideReEnterPassword = !hideReEnterPassword">{{hideReEnterPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-        <div class="remember flex items-center">
-          <p><mat-checkbox formControlName="remember"></mat-checkbox></p>
-          <h4 class="remember-text">Remember me</h4>
+            </mat-option>
+          </mat-select>
         </div>
-        <div class="remember flex items-center">
-          <p><mat-checkbox formControlName="terms"></mat-checkbox></p>
-          <h4 class="remember-text">I agree to the Terms and Conditions and Privacy Policy</h4>
-        </div>
-      </div>
   
-      <div class="form-field">
-        <button class="submit" (keyup.enter)="register()" color="primary" mat-button>Register</button>
-      </div>
-    </form>
+        <div class="form-field">
+          <h5 class="form-field-title">Country</h5>
+          <input
+            class="w-full country"
+            type="text"
+            matInput
+            formControlName="country"
+            placeholder="Enter your country"
+          />
+        </div>
+  
+        <div class="form-field">
+          <h5 class="form-field-title">Mobile phone</h5>
+          <input
+            class="w-full phone"
+            type="tel"
+            matInput
+            formControlName="phone"
+            placeholder="+7-7273-12345"
+          />
+        </div>
+    
+        <div class="form-field">
+          <h5 class="form-field-title">Email</h5>
+          <input
+            class="w-full email"
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+        </div>
+  
+        <div class="form-field">
+          <h5 class="form-field-title">First Name</h5>
+          <input
+            class="w-full user"
+            type="text"
+            matInput
+            formControlName="firstName"
+            placeholder="James"
+          />
+        </div>
+  
+        <div class="form-field">
+          <h5 class="form-field-title">Last Name</h5>
+          <input
+            class="w-full user"
+            type="text"
+            matInput
+            formControlName="lastName"
+            placeholder="Smith"
+          />
+        </div>
+    
+        <div class="form-field">
+          <h5 class="form-field-title">Password</h5>
+          <input class="w-full password" matInput placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'" formControlName="password" required>
+          <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </div>
+  
+        <div class="form-field">
+          <h5 class="form-field-title">Re-enter password</h5>
+          <input class="w-full password" matInput placeholder="Re-enter your password" [type]="hideReEnterPassword ? 'password' : 'text'" formControlName="reEnterPassword" required>
+          <mat-icon matSuffix (click)="hideReEnterPassword = !hideReEnterPassword">{{hideReEnterPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <div class="remember flex items-center">
+            <p><mat-checkbox formControlName="remember"></mat-checkbox></p>
+            <h4 class="remember-text">Remember me</h4>
+          </div>
+          <div class="remember flex items-center">
+            <p><mat-checkbox formControlName="terms"></mat-checkbox></p>
+            <h4 class="remember-text">I agree to the Terms and Conditions and Privacy Policy</h4>
+          </div>
+        </div>
+    
+        <div class="form-field">
+          <button class="submit" (keyup.enter)="register()" color="primary" mat-button>Register</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>

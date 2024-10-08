@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'zenar-header',
@@ -12,4 +12,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private route: Router) {}
+
+  redirectToSignup() {
+    this.route.navigate(['register']);
+  }
+
+  redirectToLogin() {
+    this.route.navigate(['login']);
+  }
+}
