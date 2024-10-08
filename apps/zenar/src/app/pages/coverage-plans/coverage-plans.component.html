@@ -6,7 +6,7 @@
     <span>Coverage Plans</span>
   </div>
 </div>
-<section class="first-section mt-10">
+<!-- <section class="first-section mt-10">
   <div class="container">
     <h1 class="title">Coverage Plans</h1>
   </div>
@@ -52,16 +52,80 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="compare">
   <div class="container">
     <h1 class="title">Compare Plans and Pick the Best Coverage<br class="except">
-      for Your <span class="italic">Smartphone</span></h1>
+      for Your <span class="italic">Smartphone</span>
+    </h1>
 
-    
+    <div class="frame w-[1028px] flex justify-between gap-[32px]">
+      <div class="left w-[604px]">
+          <form [formGroup]="myForm">
+            <div>
+              <label for="price">Device Price</label>
+              <div style="display: flex; align-items: center;">
+                <input
+                  id="price"
+                  type="number"
+                  formControlName="price"
+                  placeholder="Enter amount"
+                  style="flex: 1; padding-right: 60px;"
+                />
+                <select formControlName="currency" style="position: relative; right: 60px; border: none; background: transparent;">
+                  <option value="usd">USD</option>
+                  <option value="eur">EUR</option>
+                  <option value="gbp">GBP</option>
+                </select>
+              </div>
+            </div>
+          
+            <div>
+              <label>Plan Duration</label>
+              <div class="plan-options">
+                <div
+                  class="plan-option"
+                  [class.selected]="myForm.get('plan')?.value === 'basic'"
+                  (click)="selectPlan('basic')"
+                >
+                  Basic
+                </div>
+                <div
+                  class="plan-option"
+                  [class.selected]="myForm.get('plan')?.value === 'optimal'"
+                  (click)="selectPlan('optimal')"
+                >
+                  Optimal
+                </div>
+                <div
+                  class="plan-option"
+                  [class.selected]="myForm.get('plan')?.value === 'plus'"
+                  (click)="selectPlan('plus')"
+                >
+                  Plus
+                </div>
+              </div>
+            </div>
+
+            
+          </form>
+
+          <span>
+            * The quoted payment and compensation amounts are indicative based on your device's estimated value. Actual prices may vary depending on store pricing. The exact value will be determined when you register and enter your device's IMEI and model in your account.
+          </span>
+        
+      </div>
+      <div class="right w-[390px]">2</div>
+    </div>
   </div>
 </section>
+
+<!-- <section class="devices">
+  <div class="container">
+
+  </div>
+</section> -->
 
 <!-- <footer class="footer">
   <div class="container">

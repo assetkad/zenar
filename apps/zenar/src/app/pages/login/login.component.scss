@@ -1,0 +1,85 @@
+.login {
+  background-color: #F5F5F5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 604px;
+  padding: 40px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  gap: 24px;
+  input {
+    outline: none;
+    padding: 13px 16px;
+    border: 1px solid #23C2EF;
+    border-radius: 8px;
+    background:url(../../../assets/icons/email.svg) 16px center no-repeat;
+    padding-left:40px;
+  }
+  &-field {
+    position: relative;
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #0C5B7E;
+
+    }
+    mat-icon {
+      position: absolute;
+      right: 18px;
+      top: 30px;
+    }
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #23C2EF;
+      margin-top: 8px;
+      text-decoration: none;
+      border-bottom: 1px dashed #23C2EF;
+    }
+    .remember {
+      margin-top: 8px
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #5E7079;
+      }
+    }
+    .submit {
+      padding: 12px 16px;
+      width: 100%;
+      background: #FF9829;
+      border-radius: 8px;
+    }
+  }
+}
+
+input.password {
+  background:url(../../../assets/icons/password.svg) 16px center no-repeat !important;
+}
+
+:host ::ng-deep {
+  .mdc-checkbox {
+    padding: 20px 8px 0px 0px !important;
+  }
+  .mdc-checkbox__background {
+    left: 0;
+  }
+  .mat-mdc-select-value {
+    width: 130px;
+  }
+}
+

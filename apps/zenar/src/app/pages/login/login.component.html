@@ -1,0 +1,50 @@
+<section class="login">
+  <div class="container">
+    <form class="form" [formGroup]="form" (ngSubmit)="login()">
+      <h3 class="title">Log in to your account</h3>
+  
+      <div class="form-field mt-[40px]">
+        <mat-select [ngModel]="selectedLanguage" [ngModelOptions]="{standalone: true}" (ngModelChange)="onLanguageChange($event)" name="language" class="form-control w-[130px]">
+          <mat-select-trigger>
+              <div class="flex gap-4">
+                <img src="../../../assets/icons/eng.svg" class="flag-icon" alt="">
+                <p>{{selectedLanguage.name}}</p>
+              </div>
+          </mat-select-trigger>
+          <mat-option *ngFor="let language of languages" [value]="language">
+            <div class="flex gap-4">
+              <img src="../../../assets/icons/eng.svg" class="flag-icon" alt="">
+              <p>{{ language.name }}</p>
+            </div>
+          </mat-option>
+        </mat-select>
+      </div>
+  
+      <div class="form-field">
+        <h5 class="form-field-title">Email</h5>
+        <input
+          class="w-full"
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+      </div>
+  
+      <div class="form-field">
+        <h5 class="form-field-title">Password</h5>
+        <input class="w-full password" matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <a href="">Forgot Password?</a>
+        <div class="remember flex items-center">
+          <p><mat-checkbox formControlName="remember"></mat-checkbox></p>
+          <h4 class="remember-text">Remember me</h4>
+        </div>
+      </div>
+  
+      <div class="form-field">
+        <button class="submit" (keyup.enter)="login()" color="primary" mat-button>Log in</button>
+      </div>
+    </form>
+  </div>
+</section>

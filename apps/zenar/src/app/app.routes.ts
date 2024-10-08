@@ -8,6 +8,20 @@ export const appRoutes: Route[] = [
     pathMatch: 'full',
   },
   {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/login/login.component').then(
+        (module) => module.LoginComponent
+      ),
+  },
+  {
+    path: 'register',
+    loadComponent: () =>
+      import('./pages/register/register.component').then(
+        (module) => module.RegisterComponent
+      ),
+  },
+  {
     path: 'home',
     loadComponent: () =>
       import('./pages/home/home.component').then(

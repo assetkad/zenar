@@ -1,75 +1,37 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  HostListener,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent, HeaderComponent } from '@zenar/ui-kit';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-coverage-plans',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    HeaderComponent,
+    FooterComponent,
+    ReactiveFormsModule,
+  ],
   templateUrl: './coverage-plans.component.html',
   styleUrl: './coverage-plans.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CoveragePlansComponent implements OnInit {
-  sectionIds = [
-    'introduction',
-    'information',
-    'how-we-use',
-    'disclosure',
-    'contact',
-  ];
+export class CoveragePlansComponent {
+  myForm: FormGroup;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.highlightActiveSection();
-  }
-
-  ngOnInit(): void {
-    this.highlightActiveSection();
-  }
-
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  highlightActiveSection() {
-    let activeSectionId = '';
-    this.sectionIds.forEach((sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 300 && rect.bottom >= 300) {
-          activeSectionId = sectionId;
-        }
-      }
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      price: [''],
+      currency: ['usd'],
+      plan: ['basic'],
     });
-
-    this.setActiveLink(activeSectionId);
   }
 
-  setActiveLink(activeSectionId: string) {
-    const links = document.querySelectorAll('.sections ul li');
+  selectPlan(plan: string) {
+    this.myForm.patchValue({ plan });
+  }
 
-    links.forEach((link) => {
-      link.classList.remove('active');
-    });
-
-    if (activeSectionId) {
-      const activeLink = document.getElementById(
-        `link-${activeSectionId}`
-      )?.parentElement;
-
-      if (activeLink) {
-        activeLink.classList.add('active');
-      }
-    }
+  onSubmit() {
+    console.log(this.myForm.value);
   }
 }
