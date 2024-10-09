@@ -93,6 +93,7 @@
   background-color: #F5F5F5;
   .frame {
     margin: 0 auto;
+    margin-top: 40px;
     .left {
       span {
         font-weight: 400;
@@ -126,6 +127,73 @@
         }
       }
     }
+  }
+  .prices {
+    h2.title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: #23C2EF;
+    }
+    &-button {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      background-color: #23C2EF;
+    }
+  }
+  .left-title, .subright-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #0C5B7E;
+  }
+  .subright{
+    &-descr {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #5E7079;
+    }
+  }
+  .plans{
+    &-title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #0C5B7E;
+    }
+    &-item {
+      &-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #5E7079;
+      }
+    }
+  }
+}
+
+.devices {
+  padding: 174px 0;
+  display: block;
+  height: 514px;
+  background: url('../../../assets/backgrounds/coverage-plans/devices.jpg') center/cover no-repeat;
+  &-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &-subtitle {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 

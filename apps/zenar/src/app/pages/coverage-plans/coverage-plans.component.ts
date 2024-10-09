@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent, HeaderComponent } from '@zenar/ui-kit';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-coverage-plans',
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HeaderComponent,
+    MatButtonModule,
     FooterComponent,
     ReactiveFormsModule,
   ],
